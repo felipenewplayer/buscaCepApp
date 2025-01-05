@@ -7,10 +7,10 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class BuscaDados {
-    public void obterDados() {
+    public void obterDados(String endereco) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://viacep.com.br/ws/04165060/json/"))
+                .uri(URI.create(endereco))
                 .build();
         HttpResponse<String> response;
 
